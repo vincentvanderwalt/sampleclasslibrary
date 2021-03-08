@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -38,6 +38,7 @@ jobs:
         args: >
           -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+          -Dsonar.cs.opencover.reportsPaths=TestResults/Cobertura.xml
 
         # Set the sonar.projectBaseDir analysis property
         projectBaseDir: sampleclasslibrary # optional, default is .
