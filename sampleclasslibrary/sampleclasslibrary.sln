@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.218
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sampleclasslibrary", "sampleclasslibrary\sampleclasslibrary.csproj", "{F926D1C5-77F9-48C5-996A-C6E153E32995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sampleclasslibrary", "sampleclasslibrary\sampleclasslibrary.csproj", "{F926D1C5-77F9-48C5-996A-C6E153E32995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sampleclasslibrary.unittests", "tests\sampleclasslibrary.unittests\sampleclasslibrary.unittests.csproj", "{E999C8D6-9D0C-48C5-81C7-05A26B06CA80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F926D1C5-77F9-48C5-996A-C6E153E32995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F926D1C5-77F9-48C5-996A-C6E153E32995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F926D1C5-77F9-48C5-996A-C6E153E32995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E999C8D6-9D0C-48C5-81C7-05A26B06CA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E999C8D6-9D0C-48C5-81C7-05A26B06CA80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E999C8D6-9D0C-48C5-81C7-05A26B06CA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E999C8D6-9D0C-48C5-81C7-05A26B06CA80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
