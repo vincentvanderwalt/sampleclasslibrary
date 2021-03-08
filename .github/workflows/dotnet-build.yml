@@ -18,8 +18,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore .\sampleclasslibrary\sampleclasslibrary.sln
+      run: dotnet restore sampleclasslibrary.sln
+      working-directory: sampleclasslibrary
     - name: Build
       run: dotnet build --no-restore
+      working-directory: sampleclasslibrary
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      working-directory: sampleclasslibrary
