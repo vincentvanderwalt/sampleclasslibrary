@@ -24,7 +24,7 @@ jobs:
       run: dotnet build --no-restore
       working-directory: sampleclasslibrary
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test -c Release --no-build --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover,cobertura --verbosity normal
       working-directory: sampleclasslibrary
     - name: SonarCloud Scan
       env:
