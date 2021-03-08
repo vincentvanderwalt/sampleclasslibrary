@@ -18,13 +18,13 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore sampleclasslibrary.sln
+      run: dotnet restore
       working-directory: sampleclasslibrary
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --configuration Release --no-restore
       working-directory: sampleclasslibrary
     - name: Test
-      run: dotnet test -c Release --no-build --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover,cobertura --verbosity normal
+      run: dotnet test --collect:"Code Coverage" --results-directory:"TestResults" --configuration Release --no-build --verbosity normal -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover,cobertura
       working-directory: sampleclasslibrary
     - name: SonarCloud Scan
       env:
@@ -38,6 +38,7 @@ jobs:
         args: >
           -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
           -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+
         # Set the sonar.projectBaseDir analysis property
         projectBaseDir: sampleclasslibrary # optional, default is .
 
